@@ -1,0 +1,27 @@
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<body>
+    <div id="app">
+        {{ message }}
+    </div>
+</body>
+
+<script>
+    // Vue 2 문법
+    // new Vue({
+    //     el: '#app'
+    // })
+
+    // new Vue({
+
+    // }).mount('#app')
+
+    // Vue 3 문법
+    Vue.createApp({
+        data() {
+            return {
+                message: 'hi'
+            }
+        }
+    }).mount('#app');
+</script>

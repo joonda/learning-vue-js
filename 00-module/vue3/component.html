@@ -1,0 +1,16 @@
+<body>
+  <div id="app">
+    <app-header></app-header>
+  </div>
+</body>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+  Vue.createApp({
+    components: {
+      'app-header': {
+        template: '<h1>Components Register</h1>'
+      }
+    }
+  }).mount('#app');
+</script>

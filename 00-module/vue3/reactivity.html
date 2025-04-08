@@ -1,0 +1,25 @@
+<div id="app">
+
+</div>
+
+<script>
+    const data = {
+        message: 10
+    }
+
+    function render(sth) {
+        const div = document.querySelector('#app');
+        div.innerHTML = sth;
+    }
+
+    const app = new Proxy(data, {
+        get() {
+            console.log('값 접근')
+        },
+        set(target, prop, newValue) {
+            console.log('값 갱신')
+            target[prop] = newValue;
+            render(newValue);
+        }
+    })
+</script>
